@@ -1,0 +1,177 @@
+.footer {
+    margin-top: vw(100);
+    background: #f4f4f4;
+    padding-top: vw(120);
+    padding-bottom: vw(120);
+    @media all and (max-width: 1023px) {
+        margin-top: 50px;
+        padding-top: 42px;
+        padding-bottom: 42px;
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: vw(120);
+        @media all and (max-width: 1023px) {
+            flex-direction: column;
+            padding-bottom: 22px;
+        }
+    }
+    &__l-side {
+        max-width: vw(610);
+        width: 100%;
+        flex: 0 0 vw(610);
+        @media all and (max-width: 1023px) {
+            max-width: 100%;
+            flex: unset;
+        }
+    }
+    &__text {
+        font-family: var(--second-family);
+        font-weight: 500;
+        font-size: vw(28);
+        line-height: 110%;
+        color: #121212;
+        margin-bottom: vw(40);
+        @media all and (max-width: 1023px) {
+            font-size: 16px;
+            margin-bottom: 22px;
+        }
+    }
+    &__list {
+        gap: vw(30);
+        display: flex;
+        flex-wrap: wrap;
+        @media all and (max-width: 1023px) {
+            gap: 30px;
+        }
+    }
+    &__info {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: vw(14);
+        line-height: 100%;
+        color: #121212;
+        @media all and (max-width: 1023px) {
+            font-size: 13px;
+        }
+        span {
+            color: rgba(18, 18, 18, 0.4);
+        }
+    }
+    &__r-side {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        @media all and (max-width: 1023px) {
+            justify-content: unset;
+        }
+    }
+    &__menu {
+        width: max-content;
+        margin-left: vw(120);
+        @media all and (max-width: 1023px) {
+            margin-left: 0;
+            margin-right: 40px;
+            margin-bottom: 20px;
+        }
+        span {
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: vw(20);
+            line-height: 100%;
+            display: inline-block;
+            margin-bottom: vw(42);
+            color: #121212;
+            @media all and (max-width: 1023px) {
+                font-size: 14px;
+                margin-bottom: 22px;
+            }
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                a {
+                    display: inline-block;
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: vw(16);
+                    line-height: 100%;
+                    color: rgba(18, 18, 18, 0.6);
+                    text-decoration: none;
+                    margin-bottom: vw(28);
+                    @media all and (max-width: 1023px) {
+                        font-size: 13px;
+                        margin-bottom: 22px;
+                    }
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        padding-top: vw(120);
+        border-top: 1px solid rgba(18, 18, 18, 0.2);
+        @media all and (max-width: 1023px) {
+            padding-top: 42px;
+            flex-direction: column;
+        }
+    }
+    &__logo {
+        font-size: 0;
+        display: inline-block;
+        text-decoration: none;
+        max-width: vw(224);
+        width: 100%;
+        @media all and (max-width: 1023px) {
+            max-width: 224px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    &__link {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: vw(14);
+        line-height: 130%;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: rgba(18, 18, 18, 0.6);
+        margin-left: auto;
+        margin-right: vw(280);
+        @media all and (max-width: 1023px) {
+            margin-top: 32px;
+            margin-bottom: 16px;
+            margin-left: 0;
+            margin-right: 0;
+            font-size: 13px;
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__dev {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: vw(14);
+        line-height: 130%;
+        color: rgba(18, 18, 18, 0.6);
+        @media all and (max-width: 1023px) {
+            font-size: 13px;
+        }
+        a {
+            color: rgba(18, 18, 18, 0.6);
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

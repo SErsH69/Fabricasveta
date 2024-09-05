@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <title>Наши контакты</title>
+	<link rel="stylesheet" href="css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=8a69628d-9012-482b-962d-9bd92d6f2d51&lang=ru_RU&_v=20220914090452" type="text/javascript"></script>
+</head>
+<body>
+    <div class="wrapper" id="app" :class="{isMobile, isTablet}">
+        @@include('blocks/modules/header/header.html', {})
+        <main class="content">
+            @@include('blocks/modules/breadcrums/breadcrums.html', {})
+            @@include('blocks/modules/main_map/main_map.html', {})
+            @@include('blocks/modules/main_form/main_form.html', {})
+        </main>
+        @@include('blocks/modules/footer/footer.html', {})
+        @@include('blocks/modules/modals/main.modal.html', {})
+    </div>
+    <script src="js/app.min.js"></script>
+</body>
+</html>

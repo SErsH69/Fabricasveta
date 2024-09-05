@@ -1,0 +1,86 @@
+.main_garant {
+    &__title {
+        font-family: var(--second-family);
+        font-weight: 500;
+        font-size: vw(42);
+        line-height: 100%;
+        color: #121212;
+        margin-bottom: vw(42);
+        @media all and (max-width: 1023px) {
+            font-size: 24px;
+            margin-bottom: 22px;
+        }
+    }
+    &__item {
+        &:not(:last-child) {
+            padding-bottom: vw(60);
+            margin-bottom: vw(60);
+            border-bottom: 1px solid rgba(18, 18, 18, 0.1);
+            @media all and (max-width: 1023px) {
+                padding-bottom: 30px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    &__tit {
+        margin-bottom: vw(42);
+        font-family: var(--second-family);
+        font-weight: 500;
+        font-size: vw(28);
+        line-height: 100%;
+        color: #121212;
+        @media all and (max-width: 1023px) {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    }
+    &__txt {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: vw(16);
+        line-height: 130%;
+        color: rgba(18, 18, 18, 0.8);
+        max-width: vw(1200);
+        @media all and (max-width: 1023px) {
+            font-size: 14px;
+            max-width: 1200px;
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            margin-bottom: vw(30);
+            @media all and (max-width: 1023px) {
+                margin-bottom: 15px;
+            }
+            li {
+                padding-left: vw(15);
+                position: relative;
+                margin-bottom: vw(16);
+                @media all and (max-width: 1023px) {
+                    margin-bottom: 10px;
+                    padding-left: 15px;
+                }
+                &:before {
+                    content: '';
+                    width: 3px;
+                    height: 3px;
+                    background: #1e6ff4;
+                    top: 50%;
+                    margin-top: -2px;
+                    border-radius: 50%;
+                    left: 0;
+                    position: absolute;
+                    @media all and (max-width: 1023px) {
+                        top: 7px;
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+        a {
+            font-weight: 500;
+            color: #1e6ff4;
+        }
+    }
+}

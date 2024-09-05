@@ -1,0 +1,243 @@
+.main_form {
+    padding-top: vw(50);
+    @media all and (max-width: 1023px) {
+        padding-top: 20px;
+    }
+    &__in {
+        display: flex;
+        @media all and (max-width: 1023px) {
+            flex-direction: column;
+        }
+    }
+    &__l-side {
+        flex: 0 0 vw(950);
+        margin-right: vw(60);
+        border-radius: vw(28);
+        background: #fff;
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04), 0 13px 65px 0 rgba(0, 0, 0, 0.07);
+        padding: vw(80);
+        @media all and (max-width: 1023px) {
+            flex: unset;
+            border-radius: 28px;
+            margin-right: 0;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+    }
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__title {
+        margin-bottom: vw(42);
+        font-family: var(--second-family);
+        font-weight: 500;
+        font-size: vw(42);
+        line-height: 100%;
+        width: 100%;
+        color: #121212;
+        @media all and (max-width: 1023px) {
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+    }
+    &__field {
+        width: 100%;
+        margin-bottom: vw(16);
+        input, textarea {
+            width: 100%;
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: vw(16);
+            border: 0;
+            line-height: 100%;
+            color: rgba(18, 18, 18, 1);
+            padding-top: vw(28);
+            padding-bottom: vw(28);
+            border-bottom: 1px solid rgba(18, 18, 18, 0.1);
+            &::placeholder {
+                color: rgba(18, 18, 18, 0.4);
+            }
+            @media all and (max-width: 1023px) {
+                padding-top: 15px;
+                padding-bottom: 15px;
+                font-size: 14px;
+            }
+        }
+        &--small {
+            width: calc(50% - vw(21));
+            @media all and (max-width: 1023px) {
+                width: 100%;
+            }
+        }
+    }
+    &__bottom {
+        display: flex;
+        margin-top: vw(50);
+        align-items: center;
+        @media all and (max-width: 1023px) {
+            flex-direction: column;
+            margin-top: 15px;
+            align-items: unset;
+        }
+        input {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: vw(15);
+            line-height: 100%;
+            color: #fff;
+            max-width: vw(183);
+            width: 100%;
+            padding: vw(21);
+            text-align: center;
+            display: inline-block;
+            background: #1e6ff4;
+            border: 0;
+            border-radius: vw(30);
+            cursor: pointer;
+            &:hover {
+                background: #1e69e5;
+            }
+            @media all and (max-width: 1023px) {
+                max-width: 100%;
+                font-size: 15px;
+                border-radius: 30px;
+                padding: 21px;
+            }
+        }
+    }
+    &__text {
+        width: 100%;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: vw(16);
+        line-height: 120%;
+        color: rgba(18, 18, 18, 0.4);
+        a {
+            color: #1e6ff4;
+        }
+        @media all and (max-width: 1023px) {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    }
+    &__r-side {
+        width: 100%;
+    }
+    &__rekv {
+        margin-bottom: vw(42);
+        @media all and (max-width: 1023px) {
+            margin-bottom: 20px;
+        }
+        > span {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: vw(14);
+            line-height: 130%;
+            color: rgba(18, 18, 18, 0.6);
+            margin-bottom: vw(20);
+            display: block;
+            @media all and (max-width: 1023px) {
+                margin-bottom: 15px;
+                font-size: 14px;
+            }
+        }
+        div {
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: vw(28);
+            line-height: 120%;
+            color: rgba(18, 18, 18, 0.4);
+            b {
+                color: #121212;
+            }
+            @media all and (max-width: 1023px) {
+                font-size: 20px;
+            }
+        }
+    }
+    &__link {
+        > span {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: vw(14);
+            line-height: 130%;
+            color: rgba(18, 18, 18, 0.6);
+            margin-bottom: vw(20);
+            display: block;
+            @media all and (max-width: 1023px) {
+                margin-bottom: 15px;
+                font-size: 14px;
+            }
+        }
+        a {
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: vw(28);
+            line-height: 120%;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 20px;
+            color: #121212;
+            @media all and (max-width: 1023px) {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    &__buttons {
+        > span {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: vw(14);
+            line-height: 130%;
+            color: rgba(18, 18, 18, 0.6);
+            margin-bottom: vw(20);
+            display: block;
+            @media all and (max-width: 1023px) {
+                margin-bottom: 15px;
+                font-size: 14px;
+            }
+        }
+        a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            margin-right: vw(20);
+            margin-bottom: vw(10);
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: vw(15);
+            line-height: 100%;
+            color: #fff;
+            max-width: vw(183);
+            width: 100%;
+            padding: vw(21);
+            text-align: center;
+            background: #1e6ff4;
+            border-radius: vw(30);
+            &:hover {
+                background: #1e69e5;
+            }
+            svg {
+                margin-right: vw(12);
+                @media all and (max-width: 1023px) {
+                    margin-right: 12px;
+                }
+            }
+            span {
+                display: inline-block;
+            }
+            @media all and (max-width: 1023px) {
+                max-width: 183px;
+                font-size: 15px;
+                border-radius: 30px;
+                padding: 21px;
+                margin-right: 10px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
