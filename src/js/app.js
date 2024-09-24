@@ -5,6 +5,7 @@ import Vue from 'vue/dist/vue.js';
 
 import Header from '../blocks/modules/header/header.js';
 import MainMap from '../blocks/modules/main_map/main_map.js';
+import MainSlider from '../blocks/modules/main_slider/main_slider.js';
 import Modals from '../blocks/modules/modals/modals.js';
 
 window.app = new Vue({
@@ -20,6 +21,7 @@ window.app = new Vue({
             isMobileMenuOpened: false,
         }),
         mainMap: new MainMap(),
+        mainSlider: new MainSlider(),
         modals: new Modals({
             modalsSelector: "data-modal",
             modalsOpenerSelector: "data-modal-id",
@@ -31,10 +33,11 @@ window.app = new Vue({
             this.sizes.window = window.innerWidth;
         });
     },
-    beforeMount() {
+    mounted() {
         this.isMounted = true;
         this.header.init();
         this.mainMap.init();
+        this.mainSlider.init();
         this.modals.init();
     },
     computed: {

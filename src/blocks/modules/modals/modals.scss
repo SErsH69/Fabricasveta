@@ -5,12 +5,111 @@
     right: 0;
     bottom: 0;
     text-align: center;
-    background: rgba(0, 0, 0, 0.60);
+    background: rgba(18, 18, 18, 0.1);
     z-index: 200;
     opacity: 0;
     visibility: hidden;
     transition: all .3s ease;
     padding: 16px;
+    &__politic {
+        right: 0;
+        text-align: right;
+        padding: 0;
+        .modal__closer {
+            top: vw(60);
+            right: vw(60);
+            @media all and (max-width: 1023px) {
+                top: 10px;
+                right: 10px;
+            }
+        }
+        .modal__in {
+            max-width: vw(1705);
+            height: 100vh;
+            overflow: auto;
+            padding: vw(100) vw(80);
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04), 0 13px 65px 0 rgba(0, 0, 0, 0.07);
+            @media all and (max-width: 1023px) {
+                max-width: 80%;
+                padding: 30px 20px;
+            }
+        }
+    }
+    &__main-text {
+        padding-bottom: vw(60);
+        margin-bottom: vw(60);
+        border-bottom: 1px solid rgba(18, 18, 18, 0.1);
+        @media all and (max-width: 1023px) {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        &--title {
+            margin-bottom: vw(42);
+            font-family: var(--second-family);
+            font-weight: 500;
+            font-size: vw(42);
+            line-height: 100%;
+            color: #121212;
+            @media all and (max-width: 1023px) {
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+        }
+        &--text {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: vw(16);
+            line-height: 130%;
+            color: rgba(18, 18, 18, 0.8);
+            @media all and (max-width: 1023px) {
+                font-size: 14px;
+            }
+        }
+    }
+    &__text {
+        padding-bottom: vw(60);
+        margin-bottom: vw(60);
+        border-bottom: 1px solid rgba(18, 18, 18, 0.1);
+        @media all and (max-width: 1023px) {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+        &--title {
+            margin-bottom: vw(42);
+            font-family: var(--second-family);
+            font-weight: 500;
+            font-size: vw(28);
+            line-height: 100%;
+            color: #121212;
+            @media all and (max-width: 1023px) {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+        }
+        &--text {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: vw(16);
+            line-height: 130%;
+            color: rgba(18, 18, 18, 0.8);
+            @media all and (max-width: 1023px) {
+                font-size: 14px;
+            }
+        }
+    }
+    &__info {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: vw(16);
+        line-height: 100%;
+        color: rgba(18, 18, 18, 0.4);
+        @media all and (max-width: 1023px) {
+            font-size: 14px;
+        }
+        span {
+            color: #121212;
+        }
+    }
     &.isOpened {
         opacity: 1;
         visibility: visible;
@@ -28,14 +127,12 @@
         max-width: vw(603);
         text-align: left;
         width: 100%;
-        background: #F6F7F9;
-        border-radius: vw(16);
+        background: #fff;
         position: relative;
         padding: vw(48);
         box-shadow: 0px 9px 19px 0px rgba(0, 0, 0, 0.10), 0px 35px 35px 0px rgba(0, 0, 0, 0.09), 0px 80px 48px 0px rgba(0, 0, 0, 0.05), 0px 141px 57px 0px rgba(0, 0, 0, 0.01), 0px 221px 62px 0px rgba(0, 0, 0, 0.00);
         @media all and (max-width: 1023px) {
             max-width: 603px;
-            border-radius: 16px;
             overflow: auto;
             padding: 32px 16px;
         }
@@ -45,14 +142,17 @@
         top: vw(24);
         right: vw(24);
         cursor: pointer;
-        width: vw(24);
-        height: vw(24);
-        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M12 4L4 12M4 4L12 12' stroke='%23666666' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 50% / 100% no-repeat;
+        width: vw(46);
+        border-radius: 50%;
+        height: vw(46);
+        background: rgba(30, 111, 244, 0.1) url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.14735 14.8521C1.19379 14.8986 1.24893 14.9354 1.30963 14.9606C1.37033 14.9858 1.43539 14.9987 1.5011 14.9987C1.56681 14.9987 1.63187 14.9858 1.69257 14.9606C1.75327 14.9354 1.80841 14.8986 1.85485 14.8521L7.99985 8.70708L14.1473 14.8521C14.2412 14.9459 14.3684 14.9986 14.5011 14.9986C14.6338 14.9986 14.761 14.9459 14.8548 14.8521C14.9487 14.7583 15.0014 14.631 15.0014 14.4983C15.0014 14.3656 14.9487 14.2384 14.8548 14.1446L8.70735 7.99957L14.8523 1.85207C14.9462 1.75825 14.9989 1.63101 14.9989 1.49832C14.9989 1.36564 14.9462 1.2384 14.8523 1.14457C14.7585 1.05075 14.6313 0.998047 14.4986 0.998047C14.3659 0.998047 14.2387 1.05075 14.1448 1.14457L7.99985 7.29208L1.85235 1.14707C1.7567 1.06516 1.63366 1.02236 1.50782 1.02722C1.38198 1.03208 1.26262 1.08425 1.17357 1.17329C1.08452 1.26234 1.03235 1.38171 1.02749 1.50755C1.02263 1.63339 1.06544 1.75642 1.14735 1.85207L7.29235 7.99957L1.14735 14.1471C1.05422 14.2408 1.00195 14.3675 1.00195 14.4996C1.00195 14.6317 1.05422 14.7584 1.14735 14.8521Z' fill='%231E6FF4' /%3E%3C/svg%3E") 50% no-repeat;
+        background-size: vw(16);
         @media all and (max-width: 1023px) {
             top: 24px;
             right: 16px;
             width: 24px;
             height: 24px;
+            background-size: 12px;
         }
     }
     &__title {
@@ -68,24 +168,6 @@
             text-align: center;
             font-size: 24px;
             margin-bottom: 12px;
-        }
-    }
-    &__text {
-        color: var(--Darck-grey, #666);
-        font-family: 'Gilroy', sans-serif, cursive;
-        font-size: vw(16);
-        font-style: normal;
-        font-weight: 400;
-        line-height: 140%;
-        text-align: center;
-        max-width: vw(438);
-        width: 100%;
-        @media all and (max-width: 1023px) {
-            font-size: 16px;
-            max-width: 330px;
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
         }
     }
     &__form {

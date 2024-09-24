@@ -1,0 +1,97 @@
+.main_error {
+    margin-bottom: vw(50);
+    padding-bottom: vw(100);
+    border-bottom: 1px solid rgba(18, 18, 18, 0.1);
+    padding-top: vw(32);
+    @media all and (max-width: 1023px) {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        padding-top: 20px;
+    }
+    &__title {
+        margin: 0;
+        font-family: var(--second-family);
+        font-weight: 500;
+        font-size: vw(42);
+        line-height: 100%;
+        color: #121212;
+        margin-bottom: vw(42);
+        @media all and (max-width: 1023px) {
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+    }
+    &__subtitle {
+        font-family: var(--second-family);
+        font-weight: 500;
+        font-size: vw(28);
+        line-height: 100%;
+        color: #121212;
+        margin-bottom: vw(42);
+        @media all and (max-width: 1023px) {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    }
+    &__text {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: vw(16);
+        line-height: 130%;
+        color: rgba(18, 18, 18, 0.8);
+        margin-bottom: vw(42);
+        @media all and (max-width: 1023px) {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+    }
+    &__btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: vw(18);
+        @media all and (max-width: 1023px) {
+            gap: 15px;
+        }
+    }
+    &__btn {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: vw(15);
+        line-height: 100%;
+        color: #fff;
+        display: inline-block;
+        text-decoration: none;
+        padding: vw(20) vw(28);
+        border-radius: vw(30);
+        background: #1e6ff4;
+        @media all and (max-width: 1023px) {
+            border-radius: 30px;
+            padding: 18px 26px;
+            font-size: 14px;
+        }
+        &:hover {
+            background: #1e69e5;
+        }
+    }
+    &__main {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: vw(15);
+        line-height: 100%;
+        color: #1e6ff4;
+        display: inline-block;
+        text-decoration: none;
+        padding: vw(20) vw(28);
+        border-radius: vw(30);
+        border: 1px solid #1e6ff4;
+        @media all and (max-width: 1023px) {
+            border-radius: 30px;
+            padding: 18px 26px;
+            font-size: 14px;
+        }
+        &:hover {
+            background: #1e69e5;
+            color: #fff;
+        }
+    }
+}
